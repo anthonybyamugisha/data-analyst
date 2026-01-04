@@ -4,9 +4,6 @@ import {
   Menu, 
   Download, 
   RotateCcw, 
-  RotateCw, 
-  ZoomIn, 
-  ZoomOut, 
   Printer,
   FileText,
   Minus,
@@ -19,9 +16,6 @@ const CV = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(2);
   const [rotation, setRotation] = useState(0);
-  const [isDrawing, setIsDrawing] = useState(false);
-  const [annotations, setAnnotations] = useState([]);
-  const [currentAnnotation, setCurrentAnnotation] = useState(null);
   const [pdfLoaded, setPdfLoaded] = useState(false);
   const [pdfError, setPdfError] = useState(false);
   const { toast } = useToast();
@@ -64,12 +58,6 @@ const CV = () => {
     setRotation(prev => (prev - 90) % 360);
   };
 
-  // Handle rotate right
-  const handleRotateRight = () => {
-    setRotation(prev => (prev + 90) % 360);
-  };
-
-
 
   // Handle download
   const handleDownload = () => {
@@ -82,40 +70,6 @@ const CV = () => {
   // Handle print
   const handlePrint = () => {
     window.print();
-  };
-
-  // Handle drawing toggle
-  const toggleDrawing = () => {
-    setIsDrawing(!isDrawing);
-  };
-
-  // Handle mouse down for drawing
-  const handleMouseDown = (e) => {
-    if (!isDrawing) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setCurrentAnnotation({ x, y, path: [] });
-  };
-
-  // Handle mouse move for drawing
-  const handleMouseMove = (e) => {
-    if (!isDrawing || !currentAnnotation) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setCurrentAnnotation(prev => ({
-      ...prev,
-      path: [...prev.path, { x, y }]
-    }));
-  };
-
-  // Handle mouse up for drawing
-  const handleMouseUp = () => {
-    if (currentAnnotation && currentAnnotation.path.length > 0) {
-      setAnnotations(prev => [...prev, currentAnnotation]);
-    }
-    setCurrentAnnotation(null);
   };
 
   // Handle more options
@@ -170,21 +124,11 @@ const CV = () => {
                 <RotateCcw className="w-4 h-4 text-foreground" />
               </button>
               <button 
-                onClick={toggleDrawing}
-                className={`p-2 rounded-lg glass transition-colors ${isDrawing ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'}`}
-                title="Draw/Annotate"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                </svg>
-              </button>
-
-              <button 
                 onClick={handleDownload}
                 className="p-2 rounded-lg glass hover:bg-accent transition-colors"
                 title="Download"
               >
-                Download
+                <Download className="w-4 h-4 text-foreground" />
               </button>
               <button 
                 onClick={handlePrint}
@@ -211,10 +155,7 @@ const CV = () => {
               width: '210mm',
               height: '297mm'
             }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            
           >
             {/* PDF Content */}
             <div className="w-full h-full flex items-center justify-center bg-gray-50 relative overflow-hidden">
@@ -278,40 +219,7 @@ const CV = () => {
               )}
             </div>
 
-            {/* Annotations Layer */}
-            {annotations.map((annotation, index) => (
-              <svg 
-                key={index} 
-                className="absolute top-0 left-0 w-full h-full pointer-events-none"
-                style={{ zIndex: 10 }}
-              >
-                <path
-                  d={`M ${annotation.x} ${annotation.y} ${annotation.path.map(p => `L ${p.x} ${p.y}`).join(' ')}`}
-                  stroke="#ef4444"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            ))}
-            
-            {/* Current annotation being drawn */}
-            {currentAnnotation && currentAnnotation.path.length > 0 && (
-              <svg 
-                className="absolute top-0 left-0 w-full h-full pointer-events-none"
-                style={{ zIndex: 10 }}
-              >
-                <path
-                  d={`M ${currentAnnotation.x} ${currentAnnotation.y} ${currentAnnotation.path.map(p => `L ${p.x} ${p.y}`).join(' ')}`}
-                  stroke="#ef4444"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
+
           </div>
         </div>
       </div>
