@@ -24,6 +24,12 @@ const Resume = () => {
       status: 'Current'
     },
     {
+      period: 'Dec 2025-Present',
+      institution: 'WorldQuant University',
+      degree: 'Data Science Lab',
+      status: 'Current'
+    },
+    {
       period: '2021-2023',
       institution: 'Buddo Secondary School',
       degree: 'UACE (20/20 points, all Distinctions)',
@@ -68,13 +74,13 @@ const Resume = () => {
     {
       title: 'Programming Languages',
       icon: Code,
-      skills: ['Python', 'JavaScript', 'SQL', 'R'],
+      skills: ['Python', 'JavaScript', 'SQL'],
       delay: 0.1
     },
     {
       title: 'Data Science & Analytics',
       icon: Cpu,
-      skills: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI', 'Statistical Analysis', 'R'],
+      skills: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI'],
       delay: 0.2
     },
     {
@@ -317,6 +323,64 @@ const Resume = () => {
                 delay={skillCategory.delay}
               />
             ))}
+          </div>
+        </section>
+
+        {/* Tools */}
+        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
+            Tools
+            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-foreground">Microsoft Excel</span>
+                  <span className="text-sm font-medium text-primary">95%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2.5">
+                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '95%' }}></div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-foreground">SQL</span>
+                  <span className="text-sm font-medium text-primary">65%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2.5">
+                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '65%' }}></div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-foreground">Power BI</span>
+                  <span className="text-sm font-medium text-primary">70%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2.5">
+                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '70%' }}></div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-semibold text-foreground">Python and Data Science libraries</span>
+                  <span className="text-sm font-medium text-primary">50%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2.5">
+                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '50%' }}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
