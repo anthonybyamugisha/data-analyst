@@ -13,6 +13,7 @@ import {
   Minus,
   Plus
 } from 'lucide-react';
+import { useToast } from '../hooks/useToast';
 
 const CV = () => {
   const [scale, setScale] = useState(1);
@@ -22,9 +23,27 @@ const CV = () => {
   const [isDrawing, setIsDrawing] = useState(false);
   const [annotations, setAnnotations] = useState([]);
   const [currentAnnotation, setCurrentAnnotation] = useState(null);
+  const [pdfLoaded, setPdfLoaded] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
+  const { toast } = useToast();
 
-  // Mock CV file path - you'll need to place your actual CV in the public folder
+  // CV file path
   const cvPath = '/documents/cv.pdf';
+
+  useEffect(() => {
+    // Check if PDF file exists
+    fetch(cvPath, { method: 'HEAD' })
+      .then(response => {
+        if (!response.ok) {
+          setPdfError(true);
+        } else {
+          setPdfLoaded(true);
+        }
+      })
+      .catch(() => {
+        setPdfError(true);
+      });
+  }, [cvPath]);
 
   // Handle zoom in
   const handleZoomIn = () => {
@@ -271,17 +290,66 @@ const CV = () => {
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
           >
-            {/* PDF Content - Replace with actual PDF viewer if needed */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-50">
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4">📄</div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Anthony Byamugisha - CV</h2>
-                <p className="text-muted-foreground mb-4">Page {currentPage} of {totalPages}</p>
-                <div className="text-sm text-muted-foreground">
-                  <p>Please place your actual CV file in the public/documents folder</p>
-                  <p>File name should be: cv.pdf</p>
+            {/* PDF Content */}
+            <div className="w-full h-full flex items-center justify-center bg-gray-50 relative overflow-hidden">
+              {pdfError ? (
+                <div className="text-center p-8 max-w-md">
+                  <div className="text-6xl mb-4">📄</div>
+                  <h2 className="text-2xl font-bold text-foreground mb-2">CV Document</h2>
+                  <p className="text-muted-foreground mb-4">Could not load CV file</p>
+                  <div className="text-sm text-muted-foreground bg-yellow-50 p-4 rounded-lg">
+                    <p className="font-semibold text-yellow-800 mb-2">Please ensure:</p>
+                    <ul className="text-left space-y-1">
+                      <li>• File is named "cv.pdf"</li>
+                      <li>• File is placed in public/documents/ folder</li>
+                      <li>• File is a valid PDF</li>
+                      <li>• File is not corrupted</li>
+                    </ul>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      setPdfError(false);
+                      fetch(cvPath, { method: 'HEAD' })
+                        .then(response => {
+                          if (!response.ok) {
+                            setPdfError(true);
+                          } else {
+                            setPdfLoaded(true);
+                          }
+                        })
+                        .catch(() => {
+                          setPdfError(true);
+                        });
+                    }}
+                    className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    Retry Loading
+                  </button>
                 </div>
-              </div>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center p-4">
+                  <object 
+                    data={cvPath}
+                    type="application/pdf"
+                    width="100%"
+                    height="800px"
+                    className="max-w-4xl"
+                    title="CV Document"
+                  >
+                    <div className="text-center p-8">
+                      <p className="text-muted-foreground mb-4">Your browser does not support PDF viewing.</p>
+                      <a 
+                        href={cvPath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                      >
+                        Open CV in New Tab
+                      </a>
+                    </div>
+                  </object>
+                </div>
+              )}
             </div>
 
             {/* Annotations Layer */}
