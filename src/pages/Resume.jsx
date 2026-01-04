@@ -320,6 +320,56 @@ const Resume = () => {
           </div>
         </section>
 
+        {/* Certificates */}
+        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
+            Certificates
+            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
+                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Certificate Name</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Issuing Organization</p>
+                    <p className="text-sm text-muted-foreground">Certificate ID: ABC123</p>
+                    <p className="text-sm text-muted-foreground">Issued: Jan 2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
+                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Certificate Name</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Issuing Organization</p>
+                    <p className="text-sm text-muted-foreground">Certificate ID: ABC123</p>
+                    <p className="text-sm text-muted-foreground">Issued: Jan 2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Languages */}
         <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
           <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">

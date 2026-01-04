@@ -149,7 +149,7 @@ const CV = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* PDF Viewer Section with Document Info Header - positioned below navbar */}
-      <div className="bg-background border-b border-border/50 pt-16">
+      <div className="bg-transparent pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Left side - Document Info */}
