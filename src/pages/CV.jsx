@@ -148,19 +148,14 @@ const CV = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with action icons */}
-      <div className="bg-card border-b border-border/50 sticky top-0 z-50">
+      {/* PDF Viewer Section with Document Info Header - positioned below navbar */}
+      <div className="bg-background border-b border-border/50 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
-            {/* Left side - Menu and Document Info */}
-            <div className="flex items-center space-x-4">
-              <button className="p-2 rounded-lg glass hover:bg-accent transition-colors">
-                <Menu className="w-5 h-5 text-foreground" />
-              </button>
-              <div className="flex items-center space-x-2">
-                <FileText className="w-5 h-5 text-foreground" />
-                <span className="text-sm font-medium text-foreground">Anthony_Byamugisha_CV.pdf</span>
-              </div>
+            {/* Left side - Document Info */}
+            <div className="flex items-center space-x-2">
+              <FileText className="w-5 h-5 text-foreground" />
+              <span className="text-sm font-medium text-foreground">Anthony_Byamugisha_CV.pdf</span>
             </div>
 
             {/* Center - Page Navigation */}
@@ -274,7 +269,7 @@ const CV = () => {
       </div>
 
       {/* PDF Viewer */}
-      <div className="flex-1 flex items-center justify-center p-4">
+      <div className="flex-1 flex items-center justify-center p-4 mt-20">
         <div className="relative max-w-6xl w-full">
           <div 
             className="relative bg-white shadow-lg mx-auto"
