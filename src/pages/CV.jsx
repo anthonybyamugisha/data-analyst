@@ -129,31 +129,31 @@ const CV = () => {
       <div className="bg-transparent pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
-            {/* Left side - Document Info */}
+            {/* Left side - Document Info with Zoom Controls */}
             <div className="flex items-center space-x-2">
               <FileText className="w-5 h-5 text-foreground" />
               <span className="text-sm font-medium text-foreground">Anthony_Byamugisha_CV.pdf</span>
+              <div className="flex items-center space-x-2 ml-4">
+                <button 
+                  onClick={handleZoomOut}
+                  className="p-2 rounded-lg glass hover:bg-accent transition-colors"
+                >
+                  <Minus className="w-4 h-4 text-foreground" />
+                </button>
+                <span className="text-sm font-medium text-foreground min-w-[40px] text-center">
+                  {Math.round(scale * 100)}%
+                </span>
+                <button 
+                  onClick={handleZoomIn}
+                  className="p-2 rounded-lg glass hover:bg-accent transition-colors"
+                >
+                  <Plus className="w-4 h-4 text-foreground" />
+                </button>
+              </div>
             </div>
-
-
 
             {/* Right side - Action Icons */}
             <div className="flex items-center space-x-2">
-              <button 
-                onClick={handleZoomOut}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors"
-              >
-                <Minus className="w-4 h-4 text-foreground" />
-              </button>
-              <span className="text-sm font-medium text-foreground min-w-[40px] text-center">
-                {Math.round(scale * 100)}%
-              </span>
-              <button 
-                onClick={handleZoomIn}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors"
-              >
-                <Plus className="w-4 h-4 text-foreground" />
-              </button>
               <button 
                 onClick={handleFitToPage}
                 className="p-2 rounded-lg glass hover:bg-accent transition-colors"
@@ -184,7 +184,7 @@ const CV = () => {
                 className="p-2 rounded-lg glass hover:bg-accent transition-colors"
                 title="Download"
               >
-                <Download className="w-4 h-4 text-foreground" />
+                Download
               </button>
               <button 
                 onClick={handlePrint}
