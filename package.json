@@ -3,10 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anthonybyamugisha.github.io/anthony.dev",
+  "homepage": ".",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
