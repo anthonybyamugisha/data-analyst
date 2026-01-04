@@ -8,7 +8,6 @@ import {
   ZoomIn, 
   ZoomOut, 
   Printer,
-  MoreVertical,
   FileText,
   Minus,
   Plus
@@ -70,15 +69,7 @@ const CV = () => {
     setRotation(prev => (prev + 90) % 360);
   };
 
-  // Handle previous page
-  const handlePrevPage = () => {
-    setCurrentPage(prev => Math.max(prev - 1, 1));
-  };
 
-  // Handle next page
-  const handleNextPage = () => {
-    setCurrentPage(prev => Math.min(prev + 1, totalPages));
-  };
 
   // Handle download
   const handleDownload = () => {
@@ -96,20 +87,6 @@ const CV = () => {
   // Handle drawing toggle
   const toggleDrawing = () => {
     setIsDrawing(!isDrawing);
-  };
-
-  // Handle undo
-  const handleUndo = () => {
-    if (annotations.length > 0) {
-      setAnnotations(prev => prev.slice(0, -1));
-    }
-  };
-
-  // Handle redo
-  const handleRedo = () => {
-    // Redo functionality would require maintaining a redo stack
-    // For simplicity, we'll just clear annotations
-    setAnnotations([]);
   };
 
   // Handle mouse down for drawing
@@ -158,30 +135,7 @@ const CV = () => {
               <span className="text-sm font-medium text-foreground">Anthony_Byamugisha_CV.pdf</span>
             </div>
 
-            {/* Center - Page Navigation */}
-            <div className="flex items-center space-x-2">
-              <button 
-                onClick={handlePrevPage}
-                disabled={currentPage <= 1}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <svg className="w-4 h-4 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-sm font-medium text-foreground">
-                {currentPage} / {totalPages}
-              </span>
-              <button 
-                onClick={handleNextPage}
-                disabled={currentPage >= totalPages}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <svg className="w-4 h-4 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+
 
             {/* Right side - Action Icons */}
             <div className="flex items-center space-x-2">
@@ -224,24 +178,7 @@ const CV = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
               </button>
-              <button 
-                onClick={handleUndo}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors"
-                title="Undo"
-              >
-                <svg className="w-4 h-4 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
-                </svg>
-              </button>
-              <button 
-                onClick={handleRedo}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors"
-                title="Redo"
-              >
-                <svg className="w-4 h-4 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 10h-10a8 8 0 00-8 8v2m18-10l-6 6m6-6l-6-6" />
-                </svg>
-              </button>
+
               <button 
                 onClick={handleDownload}
                 className="p-2 rounded-lg glass hover:bg-accent transition-colors"
@@ -256,13 +193,7 @@ const CV = () => {
               >
                 <Printer className="w-4 h-4 text-foreground" />
               </button>
-              <button 
-                onClick={handleMoreOptions}
-                className="p-2 rounded-lg glass hover:bg-accent transition-colors"
-                title="More Options"
-              >
-                <MoreVertical className="w-4 h-4 text-foreground" />
-              </button>
+
             </div>
           </div>
         </div>

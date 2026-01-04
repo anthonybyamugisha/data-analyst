@@ -335,7 +335,7 @@ const Resume = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-foreground">Microsoft Excel</span>
                   <span className="text-sm font-medium text-primary">95%</span>
@@ -347,7 +347,7 @@ const Resume = () => {
             </div>
             <div className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-foreground">SQL</span>
                   <span className="text-sm font-medium text-primary">65%</span>
@@ -359,7 +359,7 @@ const Resume = () => {
             </div>
             <div className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-foreground">Power BI</span>
                   <span className="text-sm font-medium text-primary">70%</span>
@@ -371,7 +371,7 @@ const Resume = () => {
             </div>
             <div className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-foreground">Python and Data Science libraries</span>
                   <span className="text-sm font-medium text-primary">50%</span>
