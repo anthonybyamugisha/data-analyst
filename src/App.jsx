@@ -7,7 +7,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail'
 import ImageTest from './components/ImageTest'
-import CV from './pages/CV'
+
 import { ToastProvider, ToastViewport } from './components/ui/Toast'
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/cv" element={<CV />} />
             <Route path="/image-test" element={<ImageTest />} />
           </Routes>
         </Layout>
