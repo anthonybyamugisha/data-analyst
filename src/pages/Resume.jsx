@@ -403,10 +403,10 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Data Science and Analytics</h4>
-                    <p className="text-sm text-muted-foreground mb-2">HPHP</p>
-                    <p className="text-sm text-muted-foreground">Issued: Dec 2025</p>
-                    <a href="https://www.life-global.org/certificate/39092993-e762-457a-97e6-39193cfc8163" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Business Analysis Basics</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
+                    <p className="text-sm text-muted-foreground">Issued: Jan 2026</p>
+                    <a href="https://simpli.app.link/ZqQLZq6aNZb" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
@@ -423,10 +423,10 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Prompt Engineering</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
-                    <p className="text-sm text-muted-foreground">Issued: Aug 2025</p>
-                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODgxMDk3NF85MTgzMTU5MTc1NTUzNzk3MjU1OS5wbmciLCJ1c2VybmFtZSI6IkJZQU1VR0lTSEEgQU5USE9OWSJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8810974_91831591755537972559.png&_branch_match_id=1535602664010078382&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1i%2BIqnJNcapydA5Psq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FAAAw0d89AAAA" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Data Science and Analytics</h4>
+                    <p className="text-sm text-muted-foreground mb-2">HP Life</p>
+                    <p className="text-sm text-muted-foreground">Issued: Dec 2025</p>
+                    <a href="https://www.life-global.org/certificate/39092993-e762-457a-97e6-39193cfc8163" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
@@ -463,10 +463,10 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Business Analysis Basics</h4>
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Prompt Engineering</h4>
                     <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
-                    <p className="text-sm text-muted-foreground">Issued: Jan 2026</p>
-                    <a href="https://simpli.app.link/ZqQLZq6aNZb" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                    <p className="text-sm text-muted-foreground">Issued: Aug 2025</p>
+                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODgxMDk3NF85MTgzMTU5MTc1NTUzNzk3MjU1OS5wbmciLCJ1c2VybmFtZSI6IkJZQU1VR0lTSEEgQU5USE9OWSJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8810974_91831591755537972559.png&_branch_match_id=1535602664010078382&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1i%2BIqnJNcapydA5Psq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FAAAw0d89AAAA" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
