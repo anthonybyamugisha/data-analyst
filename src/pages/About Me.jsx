@@ -13,7 +13,7 @@ const AboutMe = () => {
   const visibleSections = [0, 1, 2, 3]
   
   const nameWords = ['BYAMUGISHA', 'ANTHONY']
-  const taglineWords = ['Data', 'Analytics', 'Driven', 'Professional', 'turning', 'raw', 'data', 'into', 'actionable', 'insights.', 'Specializing', 'in', 'data', 'analysis,', 'business', 'intelligence,', 'and', 'visualization.']
+  const taglineWords = ['Junior','Data', 'Analyst', 'Specializing', 'in', 'data', 'analysis,', 'business', 'intelligence,', 'and', 'visualization.']
 
   const skills = [
     {
