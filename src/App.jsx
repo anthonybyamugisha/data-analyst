@@ -8,11 +8,11 @@ import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail'
 import ImageTest from './components/ImageTest'
 
-import { ToastProvider, ToastViewport } from './components/ui/Toast'
+import { Toaster } from './components/ui/Toaster'
 
 function App() {
   return (
-    <ToastProvider>
+    <>
       <Router>
         <Layout>
           <Routes>
@@ -25,8 +25,8 @@ function App() {
           </Routes>
         </Layout>
       </Router>
-      <ToastViewport />
-    </ToastProvider>
+      <Toaster />
+    </>
   )
 }
 
