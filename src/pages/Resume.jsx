@@ -14,7 +14,7 @@ const Resume = () => {
   const visibleSections = [0, 1, 2, 3, 4, 5]
   
   const nameWords = ['BYAMUGISHA', 'ANTHONY']
-  const titleWords = ['Data', 'Analytics', 'Driven', 'Professional', 'and', 'Data', 'Scientist']
+  const titleWords = ['Junior', 'Data', 'BI', ',','Analyst', 'and', 'Data', 'Scientist']
   
   const education = [
     {
@@ -261,7 +261,7 @@ const Resume = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
             <div className="glass p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-border relative z-10">
               <p className="text-foreground leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
-                Data analytics driven person with a strong foundation in data analysis, business intelligence, and visualization, focused on turning raw data into clear, actionable insights. Currently advancing my skills through the Data Science Lab at WorldQuant University, where I work with real world datasets to perform data cleaning, analysis, and statistical exploration, and to apply data driven approaches to solve practical problems. I am actively learning Power BI, where I design interactive dashboards and reports that help stakeholders track KPIs, understand performance, and make informed decisions. Alongside analytics, I bring solid full stack web and mobile development experience. I build responsive web interfaces using React, HTML, and CSS, develop cross-platform mobile applications with Flutter, and create scalable backend systems using Python (Django) with MySQL. This technical background allows me to understand data at its source and build reliable, end to end data powered solutions.
+                Data analytics driven person with a good foundation in data analysis, business intelligence, and visualization, focused on turning raw data into clear, actionable insights. Currently advancing my skills through the Data Science Lab at WorldQuant University, where I work with real world datasets to perform data cleaning, analysis, and statistical exploration, and to apply data driven approaches to solve practical problems. I am actively learning Power BI, where I design interactive dashboards and reports that help stakeholders track KPIs, understand performance, and make informed decisions. Alongside analytics, I bring solid full stack web and mobile development experience. I build responsive web interfaces using React, HTML, and CSS, develop cross-platform mobile applications with Flutter, and create scalable backend systems using Python (Django) with MySQL. This technical background allows me to understand data at its source and build reliable, end to end data powered solutions.
               </p>
             </div>
           </div>
