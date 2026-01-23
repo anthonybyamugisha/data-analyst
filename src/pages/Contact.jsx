@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import emailjs from '@emailjs/browser'
 import { Link } from 'react-router-dom'
 import { useToast } from '../hooks/useToast'
 
@@ -28,21 +27,6 @@ const Contact = () => {
   const titleWords = ['I\'m', 'always', 'interested', 'in', 'new', 'opportunities', 'and', 'exciting', 'projects.', 'Whether', 'you', 'have', 'a', 'question,', 'want', 'to', 'discuss', 'a', 'potential', 'collaboration,', 'or', 'just', 'want', 'to', 'say', 'hello,', 'I\'d', 'love', 'to', 'hear', 'from', 'you.']
 
   useEffect(() => {
-    // Initialize EmailJS with your public key
-    emailjs.init({
-      publicKey: 'cPmZrg5wMdFxhficmQoKP',
-      blockHeadless: false,
-      blockList: {
-        list: [],
-        blockMessage: 'The domain is not allowed to send emails'
-      },
-      limitRate: {
-        id: 'app',
-        throttle: 10000
-      }
-    });
-    
-    // Handle text animations
     setIsLoaded(true)
     
     // Animate title words sequentially (similar to About page)
@@ -72,50 +56,57 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitMessage('')
     
     try {
-      // EmailJS configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
-      const serviceId = 'service_d2ydqd4'      // Your Gmail service ID
-      const templateId = 'template_ifhviyr'   // Your actual Template ID
-      const publicKey = 'RvjO3VSCohf7OZsGa'  // Your public key
+      // Formspree endpoint
+      const formEndpoint = 'https://formspree.io/f/mzdevlpl';
       
-      // Template parameters that will be sent to your email
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'byamugishanthony@gmail.com' // Your email address
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('name', e.target.name.value);
+      formData.append('email', e.target.email.value);
+      formData.append('subject', e.target.subject.value);
+      formData.append('message', e.target.message.value);
+      
+      console.log('Sending form data to Formspree:', {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value
+      });
+      
+      // Send to Formspree
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        console.log('Form submitted successfully:', result);
+        
+        setIsSubmitting(false)
+        toast({
+          title: 'Message Delivered Successfully! 📨',
+          description: 'Thank you for reaching out, Anthony! Your message has been delivered to my inbox. I typically respond within 24-48 hours. Feel free to reach out directly at byamugishanthony@gmail.com if urgent.',
+          variant: 'default',
+        })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        throw new Error(result.error || 'Failed to send message');
       }
       
-      console.log('Sending email with parameters:', { serviceId, templateId, publicKey, templateParams });
-      
-      // Send email using EmailJS
-      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey)
-      
-      console.log('Email sent successfully:', response);
-      
-      setIsSubmitting(false)
-      toast({
-        title: 'Message Sent!',
-        description: 'Thank you for your message! I\'ll get back to you soon.',
-        variant: 'default',
-      })
-      setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
-      console.error('Email sending failed:', error)
-      console.error('Error details:', {
-        status: error.status,
-        text: error.text,
-        message: error.message,
-        response: error.response
-      });
+      console.error('Form submission failed:', error);
       
       setIsSubmitting(false)
       toast({
         title: 'Error Sending Message',
-        description: 'Sorry, there was an error sending your message. Please try again or email me directly.',
+        description: error.message || 'Sorry, there was an error sending your message. Please try again or email me directly.',
         variant: 'destructive',
       })
     }
@@ -179,7 +170,7 @@ const Contact = () => {
       href: 'https://www.upwork.com/freelancers/~0186637ac601dd1727',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3.004-2.439-5.454-5.439-5.454z"/>
+          <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.065-2.704 2.065zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3.004-2.439-5.454-5.439-5.454z"/>
         </svg>
       )
     }
@@ -370,8 +361,6 @@ const Contact = () => {
                     placeholder="Tell me about your project or just say hello..."
                   />
                 </div>
-
-
 
                 <button
                   type="submit"
