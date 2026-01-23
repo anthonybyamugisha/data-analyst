@@ -14,7 +14,7 @@ const Resume = () => {
   const visibleSections = [0, 1, 2, 3, 4, 5]
   
   const nameWords = ['BYAMUGISHA', 'ANTHONY']
-  const titleWords = ['Junior', 'Data', 'BI', ',','Analyst', 'and', 'Data', 'Scientist']
+  const titleWords = ['Junior', 'Data', 'BI', ',', 'Analyst', 'and', 'Data', 'Scientist']
   
   const education = [
     {
@@ -338,10 +338,10 @@ const Resume = () => {
               <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-foreground">Microsoft Excel</span>
-                  <span className="text-sm font-medium text-primary">95%</span>
+                  <span className="text-sm font-medium text-primary">80%</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-2.5">
-                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '95%' }}></div>
+                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '80%' }}></div>
                 </div>
               </div>
             </div>
