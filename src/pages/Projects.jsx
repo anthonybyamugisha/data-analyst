@@ -18,6 +18,25 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 7,
+      title: 'Algomind Hive - AI-Powered Beekeeping Intelligence Platform',
+      description: 'An advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions.',
+      longDescription: 'Algomind Hive is an advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions. The system combines climate data, bee behavior data, and market signals to predict, analyze, and recommend actions that improve honey yield, reduce colony losses, and optimize market decisions.',
+      techStack: ['Django', 'Python', 'HTML', 'CSS', 'Bootstrap 5.3', 'SQLite', 'Render'],
+      features: [
+        'Predictive Analytics for hive conditions, nectar availability, and market trends',
+        'Real-time monitoring of hive health and environmental factors with automated alerts',
+        'Actionable recommendations based on predictive models and expert knowledge',
+        'Climate intelligence integrating weather data and environmental factors',
+        'Market insights with price forecasting and optimal selling recommendations',
+        'Educational resources with access to best practices and expert knowledge'
+      ],
+      github: 'https://github.com/anthonybyamugisha/',
+      image: '/images/algomind_hive.png',
+      category: 'Full Stack',
+      liveUrl: 'https://algomindhive.onrender.com'
+    },
+    {
       id: 1,
       title: 'VendorSync - Inventory Management System',
       description: 'A comprehensive inventory management solution that demonstrates end-to-end software engineering from problem analysis to scalable system design.',

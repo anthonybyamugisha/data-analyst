@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ExternalLink, Github } from 'lucide-react';
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from '../components/ui/Breadcrumb';
 import { AspectRatio } from '../components/ui/AspectRatio';
 
@@ -10,6 +11,97 @@ const ProjectDetail = () => {
   // For now, we'll use the same project data from Projects.jsx
   // In a real implementation, this would be fetched based on the projectId
   const projects = [
+    {
+      id: 7,
+      title: 'Algomind Hive - AI-Powered Beekeeping Intelligence Platform',
+      description: 'An advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions.',
+      longDescription: 'Algomind Hive is an advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions. The system combines climate data, bee behavior data, and market signals to predict, analyze, and recommend actions that improve honey yield, reduce colony losses, and optimize market decisions.',
+      detailedDescription: `<h3>Executive Summary</h3>
+<p>Algomind Hive is an advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions. The system combines climate data, bee behavior data, and market signals to predict, analyze, and recommend actions that improve honey yield, reduce colony losses, and optimize market decisions.</p>
+
+<h3>Problem Statement</h3>
+<p>Traditional beekeeping faces numerous challenges that impact productivity and profitability:</p>
+<ol>
+  <li><strong>Lack of Predictive Capabilities:</strong> Beekeepers rely on intuition and historical experience rather than data-driven predictions for crucial decisions like harvesting timing, feeding schedules, and swarm prevention.</li>
+  <li><strong>Environmental Uncertainty:</strong> Climate variations, weather patterns, and seasonal changes significantly impact bee activity and nectar availability, but beekeepers lack accurate forecasting tools.</li>
+  <li><strong>Colony Health Monitoring:</strong> Early detection of diseases, pests, or colony stress is difficult without systematic monitoring and predictive analytics.</li>
+  <li><strong>Market Price Volatility:</strong> Honey producers struggle to optimize sales timing due to unpredictable market fluctuations without reliable price forecasting tools.</li>
+  <li><strong>Resource Optimization:</strong> Feeding schedules, hive inspections, and intervention timing are often inefficient due to lack of data-driven guidance.</li>
+  <li><strong>Limited Access to Expertise:</strong> Many beekeepers lack access to expert advice and best practices, especially in remote areas.</li>
+</ol>
+
+<h3>Solution Statement</h3>
+<p>Algomind Hive addresses these challenges through an integrated AI-powered platform that provides:</p>
+<ul>
+  <li>Predictive Analytics: Advanced machine learning models that forecast hive conditions, nectar availability, and market trends.</li>
+  <li>Real-time Monitoring: Continuous monitoring of hive health and environmental factors with automated alerts.</li>
+  <li>Actionable Recommendations: Practical, context-aware advice based on predictive models and expert knowledge.</li>
+  <li>Climate Intelligence: Integration of weather data and environmental factors to predict optimal bee activity periods.</li>
+  <li>Market Insights: Price forecasting and optimal selling recommendations to maximize profitability.</li>
+  <li>Educational Resources: Access to best practices and expert knowledge through the platform.</li>
+</ul>
+
+<h3>Technical Architecture</h3>
+<p>The system consists of four main Django apps:</p>
+<ol>
+  <li><strong>climate:</strong> Handles weather data and nectar flow predictions</li>
+  <li><strong>hives:</strong> Manages hive data and colony health predictions</li>
+  <li><strong>ai_engine:</strong> Contains production predictions, market analysis, and recommendations</li>
+  <li><strong>algomind_hive:</strong> Main project configuration</li>
+</ol>
+
+<h3>Core Features</h3>
+<ul>
+  <li><strong>Climate Intelligence:</strong> Predicts environmental conditions affecting bee activity and nectar availability</li>
+  <li><strong>Bee Colony Behavior Intelligence:</strong> Detects colony health trends and behavioral risks</li>
+  <li><strong>Production & Yield Intelligence:</strong> Optimizes harvest timing and feeding decisions</li>
+  <li><strong>Market & Price Intelligence:</strong> Supports profitable selling decisions</li>
+  <li><strong>Actionable Recommendations:</strong> Converts predictions into practical beekeeping advice</li>
+</ul>
+
+<h3>Technology Stack</h3>
+<ul>
+  <li><strong>Backend Framework:</strong> Django 6.0.1</li>
+  <li><strong>Database:</strong> SQLite (development), with support for PostgreSQL (production)</li>
+  <li><strong>Web Server Interface:</strong> WSGI with Gunicorn</li>
+  <li><strong>Frontend:</strong> HTML/CSS/JavaScript with Bootstrap 5.3</li>
+  <li><strong>Static File Serving:</strong> WhiteNoise</li>
+  <li><strong>Cloud Deployment:</strong> Render-ready with Procfile</li>
+</ul>
+
+<h3>API Endpoints</h3>
+<ul>
+  <li><strong>/api/climate/</strong> - Climate data and predictions</li>
+  <li><strong>/api/hives/</strong> - Hive management and activity</li>
+  <li><strong>/api/ai/</strong> - AI predictions and recommendations</li>
+  <li><strong>/admin/</strong> - Administrative interface</li>
+</ul>
+
+<h3>Data Flow Process</h3>
+<p>The system implements a 7-stage learning loop that creates a continuous learning system that improves prediction accuracy over time:</p>
+<ol>
+  <li>Data Collection (manual + automated)</li>
+  <li>Data Validation & Storage</li>
+  <li>Feature Engineering</li>
+  <li>Model Inference</li>
+  <li>Decision Generation</li>
+  <li>Feedback Capture</li>
+  <li>Model Improvement</li>
+</ol>`,
+      techStack: ['Django', 'Python', 'HTML', 'CSS', 'Bootstrap 5.3', 'SQLite', 'Render'],
+      features: [
+        'Predictive Analytics for hive conditions, nectar availability, and market trends',
+        'Real-time monitoring of hive health and environmental factors with automated alerts',
+        'Actionable recommendations based on predictive models and expert knowledge',
+        'Climate intelligence integrating weather data and environmental factors',
+        'Market insights with price forecasting and optimal selling recommendations',
+        'Educational resources with access to best practices and expert knowledge'
+      ],
+      github: 'https://github.com/anthonybyamugisha/algomind-hive',
+      image: '/images/algomind_hive.png',
+      category: 'Full Stack',
+      liveUrl: 'https://algomindhive.onrender.com'
+    },
     {
       id: 1,
       title: 'VendorSync - Inventory Management System',
@@ -347,6 +439,24 @@ These chatbots have successfully reduced customer service response times by up t
                   </svg>
                 </a>
               </div>
+              
+              {/* Live URL */}
+              {project.liveUrl && (
+                <div className="mt-6 glass p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-foreground mb-4">Live Demo</h3>
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors duration-300"
+                  >
+                    Visit Website
+                    <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
           
