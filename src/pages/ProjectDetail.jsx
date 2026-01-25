@@ -29,11 +29,11 @@ const ProjectDetail = () => {
 </ul>
 
 <h3>Technical Approach</h3>
-<p>The dashboard was built using Power BI with DAX for advanced calculations and data modeling. The solution integrates with multiple data sources to provide a unified view of sales performance. The responsive design ensures accessibility across devices.</p>
+<p>The dashboard was built using Excel for advanced calculations and data modeling. The solution integrates with multiple data sources to provide a unified view of sales performance. The responsive design ensures accessibility across devices.</p>
 
 <h3>Impact</h3>
 <p>The dashboard has improved decision-making speed by 40% and increased sales team productivity by providing instant access to critical performance metrics. Stakeholders can now identify trends and opportunities in real-time rather than waiting for weekly or monthly reports.</p>`,
-      techStack: ['Excel', 'Power BI', 'DAX', 'Data Modeling'], // Excel first as requested
+      techStack: ['Excel'], // Only Excel as requested
       features: [
         'Real-time sales metrics visualization',
         'Interactive filtering and drill-down capabilities',
@@ -64,11 +64,11 @@ const ProjectDetail = () => {
 </ul>
 
 <h3>Technical Approach</h3>
-<p>The financial dashboard was developed using Power BI with SQL for data extraction and transformation processes. The solution features a robust data warehouse architecture that ensures data quality and performance. ETL processes run regularly to keep data up-to-date.</p>
+<p>The financial dashboard was developed using Power BI for data visualization and reporting. The solution features a robust data architecture that ensures data quality and performance.</p>
 
 <h3>Impact</h3>
 <p>The dashboard has streamlined the reporting process, reducing the time spent on manual report creation by 60%. Decision-makers now have instant access to accurate, up-to-date information, enabling faster response to market changes and business opportunities.</p>`,
-      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'], // Power BI first as requested
+      techStack: ['Power BI'], // Only Power BI as requested
       features: [
         'Multi-source data aggregation',
         'Automated report generation',
