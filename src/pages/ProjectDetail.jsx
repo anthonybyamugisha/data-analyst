@@ -33,7 +33,7 @@ const ProjectDetail = () => {
 
 <h3>Impact</h3>
 <p>The dashboard has improved decision-making speed by 40% and increased sales team productivity by providing instant access to critical performance metrics. Stakeholders can now identify trends and opportunities in real-time rather than waiting for weekly or monthly reports.</p>`,
-      techStack: ['Power BI', 'DAX', 'Excel', 'Data Modeling'],
+      techStack: ['Excel', 'Power BI', 'DAX', 'Data Modeling'], // Excel first as requested
       features: [
         'Real-time sales metrics visualization',
         'Interactive filtering and drill-down capabilities',
@@ -68,7 +68,7 @@ const ProjectDetail = () => {
 
 <h3>Impact</h3>
 <p>The dashboard has streamlined the reporting process, reducing the time spent on manual report creation by 60%. Decision-makers now have instant access to accurate, up-to-date information, enabling faster response to market changes and business opportunities.</p>`,
-      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'],
+      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'], // Power BI first as requested
       features: [
         'Multi-source data aggregation',
         'Automated report generation',

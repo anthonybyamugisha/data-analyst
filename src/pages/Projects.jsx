@@ -22,7 +22,7 @@ const Projects = () => {
       title: 'Daily Sales Dashboard',
       description: 'Interactive dashboard visualizing daily sales metrics, KPIs, and performance trends with drill-down capabilities.',
       longDescription: 'An interactive daily sales dashboard that visualizes key metrics, KPIs, and performance trends. The dashboard features real-time data updates, drill-down capabilities, and customizable views to help stakeholders make informed decisions.',
-      techStack: ['Power BI', 'DAX', 'Excel', 'Data Modeling'],
+      techStack: ['Excel', 'Power BI', 'DAX', 'Data Modeling'], // Excel first as requested
       features: [
         'Real-time sales metrics visualization',
         'Interactive filtering and drill-down capabilities',
@@ -40,7 +40,7 @@ const Projects = () => {
       title: 'Finance Summary Dashboard',
       description: 'Comprehensive financial dashboard aggregating data from multiple sources to provide strategic insights.',
       longDescription: 'A comprehensive financial dashboard that aggregates data from multiple sources to provide strategic insights. The dashboard enables data-driven decision making through interactive visualizations and automated reporting.',
-      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'],
+      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'], // Power BI first as requested
       features: [
         'Multi-source data aggregation',
         'Automated report generation',
@@ -302,6 +302,7 @@ const Projects = () => {
                   githubUrl={project.github}
                   liveUrl={project.liveUrl}
                   image={project.image}
+                  category={project.category} /* Pass the category prop */
                   delay={index * 0.1}
                 />
               ))}

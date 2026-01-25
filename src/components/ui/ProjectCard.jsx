@@ -12,7 +12,11 @@ const ProjectCard = ({
   liveUrl,
   image,
   delay = 0,
+  category, // Add category prop
 }) => {
+  // Check if the project is a dashboard
+  const isDashboard = category === 'Dashboards';
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -75,13 +79,17 @@ const ProjectCard = ({
             Details
             <ExternalLink className="w-4 h-4" />
           </Link>
-          {liveUrl && (
+          
+          {/* Show Live button only if not a dashboard and liveUrl exists */}
+          {!isDashboard && liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted transition-colors duration-300 flex items-center justify-center gap-2">
               <ExternalLink className="w-4 h-4" />
               Live
             </a>
           )}
-          {githubUrl && (
+          
+          {/* Show Code button only if not a dashboard and githubUrl exists */}
+          {!isDashboard && githubUrl && (
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted transition-colors duration-300 flex items-center justify-center gap-2">
               <Github className="w-4 h-4" />
               Code
