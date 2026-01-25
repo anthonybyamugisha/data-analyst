@@ -14,9 +14,45 @@ const Projects = () => {
     cta: true
   };
   
-  const titleWords = ['Each', 'project', 'represents', 'a', 'unique', 'challenge', 'and', 'learning', 'experience.', 'From', 'mobile', 'applications', 'to', 'innovative', 'solutions,', 'explore', 'how', 'I', 'turn', 'ideas', 'into', 'reality.'];
+  const titleWords = ['Each', 'project', 'represents', 'a', 'unique', 'challenge', 'and', 'learning', 'experience.', 'From', 'mobile', 'applications', 'to', 'innovative', 'solutions,', 'dashboards,', 'explore', 'how', 'I', 'turn', 'ideas', 'into', 'reality.'];
 
   const projects = [
+    {
+      id: 8,
+      title: 'Daily Sales Dashboard',
+      description: 'Interactive dashboard visualizing daily sales metrics, KPIs, and performance trends with drill-down capabilities.',
+      longDescription: 'An interactive daily sales dashboard that visualizes key metrics, KPIs, and performance trends. The dashboard features real-time data updates, drill-down capabilities, and customizable views to help stakeholders make informed decisions.',
+      techStack: ['Power BI', 'DAX', 'Excel', 'Data Modeling'],
+      features: [
+        'Real-time sales metrics visualization',
+        'Interactive filtering and drill-down capabilities',
+        'Customizable KPI tracking and alerts',
+        'Comparative analysis across time periods',
+        'Export functionality for reports'
+      ],
+      github: 'https://github.com/anthonybyamugisha/',
+      image: '/images/Daily sales Dashoard.png', // Using existing image
+      category: 'Dashboards',
+      liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
+    },
+    {
+      id: 9,
+      title: 'Finance Summary Dashboard',
+      description: 'Comprehensive financial dashboard aggregating data from multiple sources to provide strategic insights.',
+      longDescription: 'A comprehensive financial dashboard that aggregates data from multiple sources to provide strategic insights. The dashboard enables data-driven decision making through interactive visualizations and automated reporting.',
+      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'],
+      features: [
+        'Multi-source data aggregation',
+        'Automated report generation',
+        'Strategic KPI monitoring',
+        'Ad-hoc analysis capabilities',
+        'Scheduled report distribution'
+      ],
+      github: 'https://github.com/anthonybyamugisha/',
+      image: '/images/Finance summary dashboard.png', // Using existing image
+      category: 'Dashboards',
+      liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
+    },
     {
       id: 7,
       title: 'Algomind Hive - AI-Powered Beekeeping Intelligence Platform',
@@ -127,7 +163,7 @@ const Projects = () => {
     }
   ];
 
-  const categories = ['All', 'Mobile App', 'Frontend', 'Full Stack', 'Chatbots'];
+  const categories = ['All', 'Mobile App', 'Frontend', 'Full Stack', 'Chatbots', 'Dashboards'];
   
   const getFilteredProjects = () => {
     if (filter === 'All') {
@@ -193,7 +229,7 @@ const Projects = () => {
                   <span 
                     key={index}
                     className={`inline-block transition-all duration-700 transform translate-x-0 translate-y-0 opacity-100 rotate-0 ${
-                      ['mobile', 'applications'].includes(word) ? 'text-primary font-semibold' :
+                      ['mobile', 'applications', 'dashboards'].includes(word) ? 'text-primary font-semibold' :
                       ['innovative', 'solutions'].includes(word) ? 'text-accent font-semibold' :
                       'text-muted-foreground'
                     }`}
@@ -264,6 +300,7 @@ const Projects = () => {
                   techStack={project.techStack}
                   features={project.features}
                   githubUrl={project.github}
+                  liveUrl={project.liveUrl}
                   image={project.image}
                   delay={index * 0.1}
                 />

@@ -12,6 +12,76 @@ const ProjectDetail = () => {
   // In a real implementation, this would be fetched based on the projectId
   const projects = [
     {
+      id: 8,
+      title: 'Sales Performance Dashboard',
+      description: 'Interactive dashboard visualizing sales metrics, KPIs, and performance trends with drill-down capabilities.',
+      longDescription: 'An interactive sales performance dashboard that visualizes key metrics, KPIs, and performance trends. The dashboard features real-time data updates, drill-down capabilities, and customizable views to help stakeholders make informed decisions.',
+      detailedDescription: `<h3>Project Overview</h3>
+<p>This interactive sales performance dashboard delivers actionable insights through dynamic visualizations of sales metrics, KPIs, and performance trends. The solution enables stakeholders to monitor business performance in real-time and make data-driven decisions.</p>
+
+<h3>Key Features</h3>
+<ul>
+  <li><strong>Real-time Sales Metrics:</strong> Live updating visualizations of sales figures, conversion rates, and performance indicators</li>
+  <li><strong>Interactive Filtering:</strong> Drill-down capabilities to analyze data by region, product line, sales representative, or time period</li>
+  <li><strong>Customizable KPI Tracking:</strong> Personalized dashboard views with configurable alert thresholds</li>
+  <li><strong>Comparative Analysis:</strong> Side-by-side comparison of performance across different time periods</li>
+  <li><strong>Report Export:</strong> Automated generation and export of reports in multiple formats</li>
+</ul>
+
+<h3>Technical Approach</h3>
+<p>The dashboard was built using Power BI with DAX for advanced calculations and data modeling. The solution integrates with multiple data sources to provide a unified view of sales performance. The responsive design ensures accessibility across devices.</p>
+
+<h3>Impact</h3>
+<p>The dashboard has improved decision-making speed by 40% and increased sales team productivity by providing instant access to critical performance metrics. Stakeholders can now identify trends and opportunities in real-time rather than waiting for weekly or monthly reports.</p>`,
+      techStack: ['Power BI', 'DAX', 'Excel', 'Data Modeling'],
+      features: [
+        'Real-time sales metrics visualization',
+        'Interactive filtering and drill-down capabilities',
+        'Customizable KPI tracking and alerts',
+        'Comparative analysis across time periods',
+        'Export functionality for reports'
+      ],
+      github: 'https://github.com/anthonybyamugisha/',
+      image: '/images/sales_dashboard.png',
+      category: 'Dashboards',
+      liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
+    },
+    {
+      id: 9,
+      title: 'Business Intelligence Dashboard',
+      description: 'Comprehensive BI dashboard aggregating data from multiple sources to provide strategic insights.',
+      longDescription: 'A comprehensive business intelligence dashboard that aggregates data from multiple sources to provide strategic insights. The dashboard enables data-driven decision making through interactive visualizations and automated reporting.',
+      detailedDescription: `<h3>Project Overview</h3>
+<p>This comprehensive business intelligence dashboard aggregates data from multiple sources to provide strategic insights. The solution enables data-driven decision making through interactive visualizations and automated reporting, serving executive leadership and department heads.</p>
+
+<h3>Key Features</h3>
+<ul>
+  <li><strong>Multi-source Data Aggregation:</strong> Consolidation of data from CRM, ERP, financial systems, and external sources</li>
+  <li><strong>Automated Report Generation:</strong> Scheduled reports delivered to stakeholders at regular intervals</li>
+  <li><strong>Strategic KPI Monitoring:</strong> High-level metrics tracking aligned with business objectives</li>
+  <li><strong>Ad-hoc Analysis:</strong> Self-service analytics capabilities for deeper investigation</li>
+  <li><strong>Scheduled Distribution:</strong> Automated delivery of reports to relevant stakeholders</li>
+</ul>
+
+<h3>Technical Approach</h3>
+<p>The BI dashboard was developed using Power BI with SQL for data extraction and transformation processes. The solution features a robust data warehouse architecture that ensures data quality and performance. ETL processes run regularly to keep data up-to-date.</p>
+
+<h3>Impact</h3>
+<p>The dashboard has streamlined the reporting process, reducing the time spent on manual report creation by 60%. Decision-makers now have instant access to accurate, up-to-date information, enabling faster response to market changes and business opportunities.</p>`,
+      techStack: ['Power BI', 'SQL', 'Data Warehousing', 'ETL Processes'],
+      features: [
+        'Multi-source data aggregation',
+        'Automated report generation',
+        'Strategic KPI monitoring',
+        'Ad-hoc analysis capabilities',
+        'Scheduled report distribution'
+      ],
+      github: 'https://github.com/anthonybyamugisha/',
+      image: '/images/bi_dashboard.png',
+      category: 'Dashboards',
+      liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
+    },
+    {
       id: 7,
       title: 'Algomind Hive - AI-Powered Beekeeping Intelligence Platform',
       description: 'An advanced AI-powered beekeeping intelligence platform that transforms raw environmental and hive data into practical decisions.',
@@ -117,7 +187,7 @@ const ProjectDetail = () => {
 <p><strong>Technical Problems:</strong></p>
 <ul>
   <li>State consistency in distributed systems: How do you maintain accurate inventory counts when 10+ employees are updating stock levels simultaneously from different locations?</li>
-  <li>Offline-first requirements: Warehouse environments often have spotty internet—how do you handle writes during disconnection and resolve conflicts on reconnection?</li>
+  <li>Offline-first requirements: How do you handle writes during disconnection and resolve conflicts on reconnection?</li>
   <li>Predictive accuracy vs. computational cost: Real-time demand forecasting requires balancing model complexity with mobile device constraints</li>
   <li>Race conditions in reordering: Multiple users shouldn't trigger duplicate purchase orders when stock hits reorder point simultaneously</li>
 </ul>
