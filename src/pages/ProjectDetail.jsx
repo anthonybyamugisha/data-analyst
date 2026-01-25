@@ -13,11 +13,11 @@ const ProjectDetail = () => {
   const projects = [
     {
       id: 8,
-      title: 'Sales Performance Dashboard',
-      description: 'Interactive dashboard visualizing sales metrics, KPIs, and performance trends with drill-down capabilities.',
-      longDescription: 'An interactive sales performance dashboard that visualizes key metrics, KPIs, and performance trends. The dashboard features real-time data updates, drill-down capabilities, and customizable views to help stakeholders make informed decisions.',
+      title: 'Daily Sales Dashboard',
+      description: 'Interactive dashboard visualizing daily sales metrics, KPIs, and performance trends with drill-down capabilities.',
+      longDescription: 'An interactive daily sales dashboard that visualizes key metrics, KPIs, and performance trends. The dashboard features real-time data updates, drill-down capabilities, and customizable views to help stakeholders make informed decisions.',
       detailedDescription: `<h3>Project Overview</h3>
-<p>This interactive sales performance dashboard delivers actionable insights through dynamic visualizations of sales metrics, KPIs, and performance trends. The solution enables stakeholders to monitor business performance in real-time and make data-driven decisions.</p>
+<p>This interactive daily sales dashboard delivers actionable insights through dynamic visualizations of sales metrics, KPIs, and performance trends. The solution enables stakeholders to monitor business performance in real-time and make data-driven decisions.</p>
 
 <h3>Key Features</h3>
 <ul>
@@ -42,17 +42,17 @@ const ProjectDetail = () => {
         'Export functionality for reports'
       ],
       github: 'https://github.com/anthonybyamugisha/',
-      image: '/images/sales_dashboard.png',
+      image: '/images/Daily sales Dashoard.png', // Using existing image
       category: 'Dashboards',
       liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
     },
     {
       id: 9,
-      title: 'Business Intelligence Dashboard',
-      description: 'Comprehensive BI dashboard aggregating data from multiple sources to provide strategic insights.',
-      longDescription: 'A comprehensive business intelligence dashboard that aggregates data from multiple sources to provide strategic insights. The dashboard enables data-driven decision making through interactive visualizations and automated reporting.',
+      title: 'Finance Summary Dashboard',
+      description: 'Comprehensive financial dashboard aggregating data from multiple sources to provide strategic insights.',
+      longDescription: 'A comprehensive financial dashboard that aggregates data from multiple sources to provide strategic insights. The dashboard enables data-driven decision making through interactive visualizations and automated reporting.',
       detailedDescription: `<h3>Project Overview</h3>
-<p>This comprehensive business intelligence dashboard aggregates data from multiple sources to provide strategic insights. The solution enables data-driven decision making through interactive visualizations and automated reporting, serving executive leadership and department heads.</p>
+<p>This comprehensive financial dashboard aggregates data from multiple sources to provide strategic insights. The solution enables data-driven decision making through interactive visualizations and automated reporting, serving executive leadership and department heads.</p>
 
 <h3>Key Features</h3>
 <ul>
@@ -64,7 +64,7 @@ const ProjectDetail = () => {
 </ul>
 
 <h3>Technical Approach</h3>
-<p>The BI dashboard was developed using Power BI with SQL for data extraction and transformation processes. The solution features a robust data warehouse architecture that ensures data quality and performance. ETL processes run regularly to keep data up-to-date.</p>
+<p>The financial dashboard was developed using Power BI with SQL for data extraction and transformation processes. The solution features a robust data warehouse architecture that ensures data quality and performance. ETL processes run regularly to keep data up-to-date.</p>
 
 <h3>Impact</h3>
 <p>The dashboard has streamlined the reporting process, reducing the time spent on manual report creation by 60%. Decision-makers now have instant access to accurate, up-to-date information, enabling faster response to market changes and business opportunities.</p>`,
@@ -77,7 +77,7 @@ const ProjectDetail = () => {
         'Scheduled report distribution'
       ],
       github: 'https://github.com/anthonybyamugisha/',
-      image: '/images/bi_dashboard.png',
+      image: '/images/Finance summary dashboard.png', // Using existing image
       category: 'Dashboards',
       liveUrl: 'https://app.powerbi.com/view?r=eyJrIjoi...'
     },
