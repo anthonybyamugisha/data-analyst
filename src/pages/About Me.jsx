@@ -54,7 +54,7 @@ const AboutMe = () => {
     }
   ]
 
-  const beyondCoding = [
+  const beyondAnalysis = [
     {
       title: 'Learning',
       description: 'Always exploring new technologies',
@@ -319,16 +319,16 @@ const AboutMe = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title mb-4 relative inline-block transform transition-all duration-1000 translate-y-0 opacity-100" style={{ transitionDelay: '500ms' }}>
-              Beyond Coding
+              Beyond Analysis
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-primary rounded-full"></div>
             </h2>
             <p className="section-subtitle max-w-3xl mx-auto transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '700ms' }}>
-              My commitment to growth and community extends beyond writing code
+              My commitment to growth and community extends beyond just Data Analysis
             </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {beyondCoding.map((item, index) => (
+            {beyondAnalysis.map((item, index) => (
               <Card
                 key={item.title}
                 className={`group text-center p-6 rounded-xl card-hover transform hover:-translate-y-2 hover:scale-105 hover:shadow-hover hover:border-primary/30 transition-all duration-100 ${animatedSections[2] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
@@ -370,11 +370,11 @@ const AboutMe = () => {
           <Alert className={`glass rounded-2xl p-8 transform transition-all duration-1000 hover:scale-105 border-border/50 hover:shadow-glow ${animatedSections[3] ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`} style={{ transitionDelay: '800ms' }}>
             <AlertTitle className="text-2xl font-bold text-foreground mb-4 relative transform transition-all duration-1000 translate-y-0 opacity-100" style={{ transitionDelay: '1000ms' }}>
               <span className="text-gradient">
-                Ready to Start Your Project?
+                Ready to Unlock the Power of Your Data?
               </span>
             </AlertTitle>
             <AlertDescription className="text-xl mb-6 max-w-3xl mx-auto text-muted-foreground transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '1200ms' }}>
-              Let's collaborate to bring your ideas to life with cutting-edge technology and innovative solutions.
+              Let’s work together to transform your data into actionable insights, interactive dashboards, and smart business decisions.
             </AlertDescription>
             <Link
               to="/contact"
