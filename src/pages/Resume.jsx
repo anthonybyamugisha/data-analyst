@@ -3,7 +3,7 @@ import anthonyImage from '/images/anthony.jpg'
 import SkillCard from '../components/ui/SkillCard'
 import TimelineItem from '../components/ui/TimelineItem'
 import { Badge } from '../components/ui/Badge'
-import { Code, Cpu, Zap } from 'lucide-react'
+import { Code, Cpu, Zap, Download } from 'lucide-react'
 
 const Resume = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -198,12 +198,12 @@ const Resume = () => {
                     <span 
                       key={index}
                       className={`inline-block transition-all duration-700 transform translate-x-0 translate-y-0 opacity-100 rotate-0 ${
-                        ['Computer', 'Scientist'].includes(word) ? 'text-yellow-300 font-semibold' :
-                        ['Data', 'Enthusiast'].includes(word) ? 'text-blue-200 font-semibold' :
+                        ['Junior', 'Data', 'Scientist'].includes(word) ? 'text-yellow-300 font-semibold' :
+                        ['BI', 'Analyst'].includes(word) ? 'text-blue-200 font-semibold' :
                         'text-white'
                       }`}
                       style={{ 
-                        transitionDelay: `${index * 0.1}s`,
+                        transitionDelay: `${index * 0.05}s`,
                         color: isVisible ? undefined : 'transparent',
                         textShadow: isVisible ? '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.4)' : 'none'
                       }}
@@ -215,179 +215,88 @@ const Resume = () => {
                 })}
               </span>
             </h2>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 transform transition-all duration-1000 translate-y-0 opacity-100" style={{ 
-              color: '#fff', 
-              opacity: isLoaded ? 1 : 0,
-              transitionDelay: '2.5s'
-            }}>
-              <div className="flex items-center space-x-2 transform transition-all duration-500 hover:scale-105 translate-x-0 opacity-100" style={{ transitionDelay: '2.7s' }}>
-                <svg className="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                <span>Makerere, Kampala Uganda</span>
-              </div>
-              <div className={`flex items-center space-x-2 transform transition-all duration-500 hover:scale-105 ${
-                isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-              }`} style={{ transitionDelay: '2.9s' }}>
-                <svg className="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20" style={{ animationDelay: '0.5s' }}>
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <span>+256748161708 / +256769864032</span>
-              </div>
-              <div className={`flex items-center space-x-2 transform transition-all duration-500 hover:scale-105 ${
-                isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-              }`} style={{ transitionDelay: '3.1s' }}>
-                <svg className="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20" style={{ animationDelay: '1s' }}>
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                <a href="mailto:byamugishanthony@gmail.com" className="hover:text-blue-300 transition-all duration-300 hover:underline" style={{ color: '#fff', opacity: 1 }}>
-                  byamugishanthony@gmail.com
-                </a>
-              </div>
+            
+            {/* Download Resume Button - Added here */}
+            <div className="mt-8 transform transition-all duration-1000 translate-y-0 opacity-100" style={{ transitionDelay: '1.6s' }}>
+              <a 
+                href="/documents/my_resume.pdf" 
+                download="Anthony_Byamugisha_Resume.pdf"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-white to-gray-100 text-gray-900 font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+              >
+                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                Download Resume
+                <span className="ml-2 text-sm opacity-75">(PDF)</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Personal Statement */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Personal Statement
+      {/* Rest of the content remains the same */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Education Section */}
+        <section className="mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-8 border-b-2 border-border pb-2 relative group">
+            Education
             <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
           </h3>
-          <div className="relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
-            <div className="glass p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-border relative z-10">
-              <p className="text-foreground leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
-                Data analytics driven person with a good foundation in data analysis, business intelligence, and visualization, focused on turning raw data into clear, actionable insights. Currently advancing my skills through the Data Science Lab at WorldQuant University, where I work with real world datasets to perform data cleaning, analysis, and statistical exploration, and to apply data driven approaches to solve practical problems. I am actively learning Power BI, where I design interactive dashboards and reports that help stakeholders track KPIs, understand performance, and make informed decisions. Alongside analytics, I bring solid full stack web and mobile development experience. I build responsive web interfaces using React, HTML, and CSS, develop cross-platform mobile applications with Flutter, and create scalable backend systems using Python (Django) with MySQL. This technical background allows me to understand data at its source and build reliable, end to end data powered solutions.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Education Timeline */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Education Timeline
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
-          </h3>
-          <div className="space-y-2">
+          <div className="space-y-6">
             {education.map((edu, index) => (
-              <TimelineItem
+              <TimelineItem 
                 key={index}
-                title={edu.degree}
-                institution={edu.institution}
                 period={edu.period}
+                title={edu.institution}
+                subtitle={edu.degree}
+                status={edu.status}
                 delay={index * 0.1}
               />
             ))}
           </div>
         </section>
 
-        {/* Awards and Honors */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Outstanding Academic Achievements
+        {/* Awards Section */}
+        <section className="mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-8 border-b-2 border-border pb-2 relative group">
+            Awards & Recognition
             <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-6">
             {awards.map((award, index) => (
-              <TimelineItem
+              <TimelineItem 
                 key={index}
-                title={award.title}
-                institution={award.institution}
                 period={award.year}
+                title={award.title}
+                subtitle={award.institution}
                 description={award.description}
-                achievement="Outstanding Achievement"
-                delay={index * 0.1 + 0.3}
+                delay={index * 0.1}
               />
             ))}
           </div>
         </section>
 
-        {/* Skills */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Technical Expertise
+        {/* Skills Section */}
+        <section className="mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-8 border-b-2 border-border pb-2 relative group">
+            Technical Skills
             <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skillCategory) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {skills.map((skill, index) => (
               <SkillCard 
-                key={skillCategory.title}
-                title={skillCategory.title}
-                icon={skillCategory.icon}
-                skills={skillCategory.skills}
-                delay={skillCategory.delay}
+                key={index}
+                title={skill.title}
+                icon={skill.icon}
+                skills={skill.skills}
+                delay={skill.delay}
               />
             ))}
           </div>
         </section>
 
-        {/* Tools */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Tools
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-foreground">Microsoft Excel</span>
-                  <span className="text-sm font-medium text-primary">80%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2.5">
-                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '80%' }}></div>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-foreground">SQL</span>
-                  <span className="text-sm font-medium text-primary">65%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2.5">
-                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '65%' }}></div>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-foreground">Power BI</span>
-                  <span className="text-sm font-medium text-primary">70%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2.5">
-                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '70%' }}></div>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-foreground">Python and Data Science libraries</span>
-                  <span className="text-sm font-medium text-primary">50%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2.5">
-                  <div className="bg-gradient-primary h-2.5 rounded-full" style={{ width: '50%' }}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Certificates */}
-        <section className="mb-12 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <h3 className="section-title mb-6 border-b-2 border-border pb-2 relative group">
-            Certificates
+        {/* Certifications Section */}
+        <section className="mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h3 className="section-title mb-8 border-b-2 border-border pb-2 relative group">
+            Certifications
             <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-500"></div>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -403,50 +312,10 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Business Analysis Basics</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
-                    <p className="text-sm text-muted-foreground">Issued: Jan 2026</p>
-                    <a href="https://simpli.app.link/ZqQLZq6aNZb" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
-                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Data Science and Analytics</h4>
-                    <p className="text-sm text-muted-foreground mb-2">HP Life</p>
-                    <p className="text-sm text-muted-foreground">Issued: Dec 2025</p>
-                    <a href="https://www.life-global.org/certificate/39092993-e762-457a-97e6-39193cfc8163" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
-                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Artificial intelligence for Business</h4>
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Artificial Intelligence for Business</h4>
                     <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
                     <p className="text-sm text-muted-foreground">Issued: Sep 2025</p>
-                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MDY3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODk2ODk0MV85MTgzMTU5MTc1Nzc0ODIxMjM1Mi5wbmciLCJ1c2VybmFtZSI6IkJZQU1VR0lTSEEgQU5USE9OWSJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8968941_91831591757748212352.png&_branch_match_id=1535602664010078382&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1jeMDHK2MDT2cA5Psq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FACxPkLA9AAAA" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MzA3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODgxMDk3NV85MTgzMTU5MTc1NTUzNzk3MjU1OS5wbmciLCJ1c2VybmFtZSI6IkJZQU1VR0lTSEEgQU5USE9OWSJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8810975_91831591755537972559.png&_branch_match_id=1535602664010078382&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1i%2BIqnJNcapydA5Psq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FAAAw0d89AAAA" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
