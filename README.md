@@ -159,12 +159,4 @@ npm run deploy
 
 This is a personal portfolio; contributions are welcome but not required. Feel free to open issues or submit PRs for improvements.
 
----
 
-## 📄 License
-
-This project is open source under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-_Last updated: February 26, 2026_
