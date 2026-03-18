@@ -69,22 +69,28 @@ const Resume = () => {
 
   const skills = [
     {
-      title: 'Programming Languages',
-      icon: Code,
-      skills: ['Python', 'JavaScript', 'SQL'],
+      title: 'Business Intelligence & Dashboards',
+      icon: Cpu,
+      skills: ['Power BI', 'Excel Dashboards', 'KPI Tracking', 'Data Visualization'],
       delay: 0.1
     },
     {
-      title: 'Data Science & Analytics',
-      icon: Cpu,
-      skills: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI'],
+      title: 'Data Analysis & Insights',
+      icon: Code,
+      skills: ['Statistical Analysis', 'Trend Identification', 'Business Metrics', 'Reporting'],
       delay: 0.2
     },
     {
-      title: 'Web & Application Development',
+      title: 'Data Science & Machine Learning',
       icon: Zap,
-      skills: ['React', 'Django', 'Flutter', 'HTML', 'CSS'],
+      skills: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'Predictive Modeling', 'Data Mining'],
       delay: 0.3
+    },
+    {
+      title: 'Database Management',
+      icon: Code,
+      skills: ['SQL', 'MySQL', 'Database Design', 'Database Optimization'],
+      delay: 0.4
     }
   ]
 
