@@ -161,10 +161,10 @@ const AboutMe = () => {
         {/* Minimal depth gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/10"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 z-10">
           <div className="text-center">
-            <div className="mb-6 sm:mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-gradient">
+            <div className="mb-4 sm:mb-6 md:mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 text-gradient">
                 <div className="flex flex-wrap justify-center gap-2 md:gap-4">
                   {nameWords.map((word, index) => (
                     <span 
@@ -181,10 +181,10 @@ const AboutMe = () => {
                   ))}
                 </div>
               </h1>
-              <div className={`w-16 sm:w-24 h-1 bg-gradient-primary mx-auto rounded-full transition-all duration-1000 shadow-lg ${isLoaded ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`} style={{ transitionDelay: '1.3s', boxShadow: '0 0 10px rgba(255,255,255,0.5)' }}></div>
+              <div className={`w-12 sm:w-16 md:w-20 md:h-1 h-1 bg-gradient-primary mx-auto rounded-full transition-all duration-1000 shadow-lg ${isLoaded ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`} style={{ transitionDelay: '1.3s', boxShadow: '0 0 10px rgba(255,255,255,0.5)' }}></div>
             </div>
-            <div className="mb-8 sm:mb-12">
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-5xl mx-auto">
+            <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-5xl mx-auto px-2">
                 <span className="flex flex-wrap justify-center gap-1 sm:gap-2">
                   {taglineWords.map((word, index) => {
                     const isVisible = index <= currentWord
@@ -222,13 +222,13 @@ const AboutMe = () => {
                 </span>
               </p>
             </div>
-            <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center transition-all duration-1000 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '2.5s' }}>
+            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center transition-all duration-1000 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '2.5s' }}>
               <Link
                 to="/projects"
-                className="w-full sm:w-auto group glass hover:bg-card/80 text-foreground font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-100 transform hover:scale-110 hover:shadow-glow"
+                className="w-full sm:w-auto group glass hover:bg-card/80 text-foreground font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-lg transition-all duration-100 transform hover:scale-105 hover:shadow-glow text-sm sm:text-base"
               >
                 <span className="flex items-center justify-center">
-                  <svg className="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                   View My Work
@@ -236,10 +236,10 @@ const AboutMe = () => {
               </Link>
               <Link
                 to="/resume"
-                className="w-full sm:w-auto group glass hover:bg-card/80 text-foreground font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-100 transform hover:scale-110 hover:shadow-glow"
+                className="w-full sm:w-auto group glass hover:bg-card/80 text-foreground font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-lg transition-all duration-100 transform hover:scale-105 hover:shadow-glow text-sm sm:text-base"
               >
                 <span className="flex items-center justify-center">
-                  <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Visit my resume
