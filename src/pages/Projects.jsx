@@ -312,17 +312,17 @@ const Projects = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-primary relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-primary relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
           <div className="absolute bottom-20 right-20 w-40 h-40 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-6">Let's Work Together</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Ready to transform your data into actionable insights? Let's collaborate to unlock the power of your data through analytics, dashboards, and business intelligence solutions.
           </p>
-          <Link to="/contact" className="bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl hover:shadow-hover transition-all duration-300 font-semibold shadow-lg transform hover:scale-105 inline-block">
+          <Link to="/contact" className="bg-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:shadow-hover transition-all duration-300 font-semibold shadow-lg transform hover:scale-105 inline-block text-sm sm:text-base">
             Get In Touch
           </Link>
         </div>
