@@ -245,6 +245,7 @@ const Resume = () => {
                 title={edu.institution}
                 subtitle={edu.degree}
                 status={edu.status}
+                description={edu.description}
                 delay={index * 0.1}
               />
             ))}
