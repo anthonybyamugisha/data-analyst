@@ -27,7 +27,7 @@ const Resume = () => {
     {
       period: '2024-Present',
       institution: 'Makerere University',
-      degree: "Bachelor's degree, Computer Science",
+      degree: 'Bachelor Of Science in Computer Science',
       status: 'Current'
     },
     {
@@ -243,9 +243,8 @@ const Resume = () => {
                 key={index}
                 period={edu.period}
                 title={edu.institution}
-                subtitle={edu.degree}
-                status={edu.status}
-                description={edu.description || null}
+                institution={edu.degree}
+                description={edu.description}
                 delay={index * 0.1}
               />
             ))}
