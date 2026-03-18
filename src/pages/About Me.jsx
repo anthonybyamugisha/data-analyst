@@ -13,12 +13,12 @@ const AboutMe = () => {
   const visibleSections = [0, 1, 2, 3]
   
   const nameWords = ['BYAMUGISHA', 'ANTHONY']
-  const taglineWords = ['Junior','Data', 'Analyst', 'Specializing', 'in', 'data', 'analysis,', 'business', 'intelligence,', 'and', 'visualization.']
+  const taglineWords = ['Data', 'Analyst', '&', 'Scientist', 'Specializing', 'in', 'Business', 'Intelligence,', 'data', 'visualization,', 'and', 'predictive', 'analytics.']
 
   const skills = [
     {
-      title: 'Data Analysis & Visualization',
-      description: 'Data Analysis, Business Intelligence, Power BI, Excel',
+      title: 'Business Intelligence & Dashboards',
+      description: 'Power BI, Excel Dashboards, KPI Tracking, Data Visualization',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 00-2 2h-2a2 2 0 00-2-2z" />
@@ -26,17 +26,17 @@ const AboutMe = () => {
       )
     },
     {
-      title: 'Full Stack Development',
-      description: 'React, Django, Flutter',
+      title: 'Data Analysis & Insights',
+      description: 'Statistical Analysis, Trend Identification, Business Metrics, Reporting',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
         </svg>
       )
     },
     {
-      title: 'Data Science & Analytics',
-      description: 'Python, Pandas, NumPy',
+      title: 'Data Science & Machine Learning',
+      description: 'Python, Pandas, NumPy, Predictive Modeling, Data Mining',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -44,8 +44,8 @@ const AboutMe = () => {
       )
     },
     {
-      title: 'Database & Backend',
-      description: 'Python (Django), MySQL',
+      title: 'Database & Data Engineering',
+      description: 'SQL, MySQL, Data Pipelines, ETL Processes, Data Warehousing',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
@@ -56,8 +56,8 @@ const AboutMe = () => {
 
   const beyondAnalysis = [
     {
-      title: 'Learning',
-      description: 'Always exploring new technologies',
+      title: 'Continuous Learning',
+      description: 'Mastering advanced analytics and ML technologies',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -65,8 +65,8 @@ const AboutMe = () => {
       )
     },
     {
-      title: 'Community',
-      description: 'Mentoring other developers',
+      title: 'Data Community',
+      description: 'Sharing insights and mentoring aspiring analysts',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -74,8 +74,8 @@ const AboutMe = () => {
       )
     },
     {
-      title: 'Innovation',
-      description: 'Finding creative solutions',
+      title: 'Data Innovation',
+      description: 'Transforming complex data into actionable insights',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -277,7 +277,7 @@ const AboutMe = () => {
               </h2>
             </div>
             <p className="section-subtitle max-w-3xl mx-auto transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '400ms' }}>
-              I specialize in building modern, scalable solutions across multiple platforms
+              I transform complex data into actionable insights, interactive dashboards, and strategic business intelligence solutions
             </p>
           </div>
           
@@ -323,7 +323,7 @@ const AboutMe = () => {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-primary rounded-full"></div>
             </h2>
             <p className="section-subtitle max-w-3xl mx-auto transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '700ms' }}>
-              My commitment to growth and community extends beyond just Data Analysis
+              My commitment to excellence and data-driven decision making extends beyond just analysis
             </p>
           </div>
           
@@ -374,7 +374,7 @@ const AboutMe = () => {
               </span>
             </AlertTitle>
             <AlertDescription className="text-xl mb-6 max-w-3xl mx-auto text-muted-foreground transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '1200ms' }}>
-              Let’s work together to transform your data into actionable insights, interactive dashboards, and smart business decisions.
+              Let's collaborate to transform your raw data into strategic insights, compelling visualizations, and data-driven decisions that drive business growth.
             </AlertDescription>
             <Link
               to="/contact"
