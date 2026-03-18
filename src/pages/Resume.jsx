@@ -309,6 +309,26 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Data Science and Analytics</h4>
+                    <p className="text-sm text-muted-foreground mb-2">HP Life</p>
+                    <p className="text-sm text-muted-foreground">Issued: Dec 2025</p>
+                    <a href="https://www.life-global.org/certificate/39092993-e762-457a-97e6-39193cfc8163" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
+                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Artificial Intelligence for Business</h4>
                     <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
                     <p className="text-sm text-muted-foreground">Issued: Sep 2025</p>
@@ -333,6 +353,26 @@ const Resume = () => {
                     <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
                     <p className="text-sm text-muted-foreground">Issued: Aug 2025</p>
                     <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MjgzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODgxMDk3NF85MTgzMTU5MTc1NTUzNzk3MjU1OS5wbmciLCJ1c2VybmFtZSI6IkJZQU1VR0lTSEEgQU5USE9OWSJ9&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8810974_91831591755537972559.png&_branch_match_id=1535602664010078382&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1i%2BIqnJNcapydA5Psq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FAAAw0d89AAAA" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="glass rounded-xl p-6 border border-border hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 relative z-10">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
+                      <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">CCNA: Introduction to Networks</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Cisco</p>
+                    <p className="text-sm text-muted-foreground">Issued: 2024</p>
+                    <a href="/documents/CCNA-_Introduction_to_Networks_certificate_byamugishanthony-gmail-com_64f07ace-4814-4b0a-8b7f-13235bd9664b.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
