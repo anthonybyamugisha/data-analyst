@@ -24,7 +24,7 @@ const Contact = () => {
     cta: true
   }
   
-  const titleWords = ['I\'m', 'always', 'interested', 'in', 'new', 'opportunities', 'and', 'exciting', 'projects.', 'Whether', 'you', 'have', 'a', 'question,', 'want', 'to', 'discuss', 'a', 'potential', 'collaboration,', 'or', 'just', 'want', 'to', 'say', 'hello,', 'I\'d', 'love', 'to', 'hear', 'from', 'you.']
+  const titleWords = ['Ready', 'to', 'transform', 'your', 'data', 'into', 'actionable', 'insights?', 'Whether', 'you', 'need', 'a', 'dashboard,', 'data', 'analysis,', 'or', 'business', 'intelligence', 'solutions,', 'I\'m', 'here', 'to', 'help.', 'Let\'s', 'connect', 'and', 'unlock', 'the', 'power', 'of', 'your', 'data.']
 
   useEffect(() => {
     setIsLoaded(true)
@@ -92,7 +92,7 @@ const Contact = () => {
         setIsSubmitting(false)
         toast({
           title: 'Message Delivered Successfully! 📨',
-          description: 'Thank you for reaching out, Anthony! Your message has been delivered to my inbox. I typically respond within 24-48 hours. Feel free to reach out directly at byamugishanthony@gmail.com if urgent.',
+          description: 'Thank you for reaching out! Your message has been delivered to my inbox. I typically respond within 24-48 hours. Feel free to reach out directly at byamugishanthony@gmail.com if urgent.',
           variant: 'default',
         })
         setFormData({ name: '', email: '', subject: '', message: '' })
@@ -236,8 +236,8 @@ const Contact = () => {
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-8">Let's Connect</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Ready to bring your ideas to life? I'm passionate about creating innovative solutions 
-              and would love to discuss how we can work together on your next project.
+              Ready to unlock the value hidden in your data? I specialize in transforming complex datasets into clear, 
+              actionable insights through interactive dashboards, statistical analysis, and business intelligence solutions.
             </p>
 
             {/* Contact Details */}
@@ -334,16 +334,22 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Subject *
                   </label>
-                  <input
-                    type="text"
+                  <select
                     id="subject"
                     name="subject"
                     required
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow"
-                    placeholder="What's this about?"
-                  />
+                  >
+                    <option value="">Select a service</option>
+                    <option value="Data Analysis">Data Analysis & Insights</option>
+                    <option value="Business Intelligence">Business Intelligence Solutions</option>
+                    <option value="Dashboard Development">Dashboard Development (Power BI/Excel)</option>
+                    <option value="Data Science">Data Science & Predictive Analytics</option>
+                    <option value="Consulting">Data Consulting</option>
+                    <option value="Other">Other Inquiry</option>
+                  </select>
                 </div>
 
                 <div>
@@ -358,7 +364,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow resize-none"
-                    placeholder="Tell me about your project or just say hello..."
+                    placeholder="Tell me about your data challenges or project requirements..."
                   />
                 </div>
 
@@ -402,7 +408,7 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-muted-foreground">
-            I’m always open to opportunities involving data analysis, business intelligence, and analytics-driven problem solving. Let’s connect and explore how we can work together.
+            Whether you need interactive dashboards, in-depth data analysis, or predictive models, I'm here to help you make data-driven decisions with confidence. Let's collaborate and turn your data into a strategic asset.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
