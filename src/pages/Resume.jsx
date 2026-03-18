@@ -14,7 +14,7 @@ const Resume = () => {
   const visibleSections = [0, 1, 2, 3, 4, 5]
   
   const nameWords = ['BYAMUGISHA', 'ANTHONY']
-  const titleWords = ['Junior', 'Data', 'BI', ',', 'Analyst', 'and', 'Data', 'Scientist']
+  const titleWords = ['Data', 'BI', '&', 'Analyst,', 'and', 'Data', 'Scientist']
   
   const education = [
     {
