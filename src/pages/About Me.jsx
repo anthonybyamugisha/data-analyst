@@ -266,26 +266,26 @@ const AboutMe = () => {
       </section>
 
       {/* What I Do Section */}
-      <section className={`py-20 bg-background relative overflow-hidden transform transition-all duration-1000 ${animatedSections[1] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+      <section className={`py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden transform transition-all duration-1000 ${animatedSections[1] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <div className="inline-block">
               <h2 className="section-title mb-4 relative transform transition-all duration-1000 translate-y-0 opacity-100" style={{ transitionDelay: '200ms' }}>
                 What I Do
                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-primary transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></div>
               </h2>
             </div>
-            <p className="section-subtitle max-w-3xl mx-auto transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100" style={{ transitionDelay: '400ms' }}>
+            <p className="section-subtitle max-w-3xl mx-auto transform transition-all duration-1000 hover:text-foreground translate-y-0 opacity-100 px-4" style={{ transitionDelay: '400ms' }}>
               I transform complex data into actionable insights, interactive dashboards, and strategic business intelligence solutions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {skills.map((skill, index) => (
               <Card
                 key={skill.title}
-                className={`group p-6 rounded-xl transition-all duration-100 transform hover:-translate-y-4 card-hover relative overflow-hidden hover:shadow-hover hover:border-primary/30 ${animatedSections[1] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                className={`group p-4 sm:p-6 rounded-xl transition-all duration-100 transform hover:-translate-y-2 card-hover relative overflow-hidden hover:shadow-hover hover:border-primary/30 ${animatedSections[1] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                 style={{ 
                   animationDelay: `${index * 0.1}s`,
                   transitionDelay: `${600 + index * 100}ms`
@@ -293,13 +293,13 @@ const AboutMe = () => {
               >
                 <CardContent className="p-0 relative z-10">
                   {/* Icon container with enhanced animation */}
-                  <div className="text-primary mb-4 transform transition-all duration-100 group-hover:scale-110 group-hover:text-secondary">
-                    <div className="p-3 bg-primary/10 rounded-lg w-16 h-16 flex items-center justify-center group-hover:bg-secondary/10 transition-colors duration-100">
+                  <div className="text-primary mb-3 sm:mb-4 transform transition-all duration-100 group-hover:scale-110 group-hover:text-secondary">
+                    <div className="p-2 sm:p-3 bg-primary/10 rounded-lg w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center group-hover:bg-secondary/10 transition-colors duration-100">
                       {skill.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-100">{skill.title}</h3>
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-100">{skill.description}</p>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-100">{skill.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-100">{skill.description}</p>
                   
                   {/* Animated bottom border */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-100 origin-left"></div>

@@ -205,7 +205,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-primary text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-primary text-white py-12 sm:py-16 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           {/* Animated background elements */}
@@ -217,11 +217,11 @@ const Projects = () => {
           </div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className={`text-4xl sm:text-6xl font-bold mb-6 text-foreground transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.8s' }}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.8s' }}>
             My Projects
           </h1>
-          <p className={`text-xl max-w-3xl mx-auto text-muted-foreground transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '1.2s' }}>
-            <span className="flex flex-wrap justify-center gap-1 sm:gap-2">
+          <p className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '1.2s' }}>
+            <span className="flex flex-wrap justify-center gap-1 sm:gap-2 px-2">
               {titleWords.map((word, index) => {
                 const isVisible = index <= currentWord
                 
@@ -250,14 +250,14 @@ const Projects = () => {
       </section>
 
       {/* Projects Filter */}
-      <section className="py-8 bg-background">
+      <section className="py-6 sm:py-8 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-1 sm:space-x-2 ${
                   filter === category
                     ? 'bg-gradient-primary text-primary-foreground shadow-lg'
                     : 'glass text-foreground hover:bg-card/80 hover:border-primary/50'
@@ -278,19 +278,19 @@ const Projects = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-40 h-40 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
           <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProjects.length === 0 ? (
-            <div className="text-center py-20">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">No projects found</h3>
-              <p className="text-muted-foreground">There are no projects in this category yet. Check back soon!</p>
+            <div className="text-center py-16 sm:py-20">
+              <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 px-4">No projects found</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-4">There are no projects in this category yet. Check back soon!</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredProjects.map((project, index) => (
                 <ProjectCard
                   key={project.id}
