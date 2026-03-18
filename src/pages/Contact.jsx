@@ -234,7 +234,9 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl font-bold text-foreground mb-8">Let's Connect</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              <span className="text-gradient">Let's Connect</span>
+            </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Ready to unlock the value hidden in your data? I specialize in transforming complex datasets into clear, 
               actionable insights through interactive dashboards, statistical analysis, and business intelligence solutions.
@@ -270,7 +272,9 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Follow Me</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">
+                <span className="text-gradient">Follow Me</span>
+              </h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -292,7 +296,9 @@ const Contact = () => {
           {/* Contact Form */}
           <div>
             <div className="glass rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Send a Message</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                <span className="text-gradient">Send a Message</span>
+              </h2>
               
               {/* Toast notifications will be handled by the ToastProvider */}
 
