@@ -14,7 +14,7 @@ const Projects = () => {
     cta: true
   };
   
-  const titleWords = ['Each', 'project', 'represents', 'a', 'unique', 'challenge', 'and', 'learning', 'experience.', 'From', 'mobile', 'applications', 'to', 'innovative', 'solutions,', 'dashboards,', 'explore', 'how', 'I', 'turn', 'ideas', 'into', 'reality.'];
+  const titleWords = ['Each', 'dashboard', 'and', 'data', 'project', 'represents', 'a', 'unique', 'challenge', 'and', 'analytical', 'journey.', 'From', 'business', 'intelligence', 'solutions', 'to', 'predictive', 'analytics,', 'explore', 'how', 'I', 'transform', 'complex', 'data', 'into', 'actionable', 'insights', 'and', 'strategic', 'decisions.'];
 
   const projects = [
     {
