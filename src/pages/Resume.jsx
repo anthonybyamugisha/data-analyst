@@ -18,34 +18,31 @@ const Resume = () => {
   
   const education = [
     {
-      period: '2024-Present',
-      institution: 'Makerere University',
-      degree: 'Bachelor of Science in Computer Science',
-      status: 'Current'
+      period: 'Dec 2025 – Present',
+      institution: 'WorldQuant University',
+      degree: 'Applied Data Science Lab',
+      status: 'Current',
+      description: 'Working on hands on projects involving data analysis, exploratory data analysis, and applied machine learning using Python.'
     },
     {
-      period: 'Dec 2025-Present',
-      institution: 'WorldQuant University',
-      degree: 'Data Science Lab',
+      period: '2024-Present',
+      institution: 'Makerere University',
+      degree: "Bachelor's degree, Computer Science",
       status: 'Current'
     },
     {
       period: '2021-2023',
       institution: 'Buddo Secondary School',
-      degree: 'UACE (20/20 points, all Distinctions)',
-      status: 'Completed'
+      degree: 'Uganda Advanced Certificate of Education , Physics Economics and Mathematics',
+      status: 'Completed',
+      description: 'Grade: 20 points out of 20'
     },
     {
       period: '2017-2020',
       institution: 'Mwizi Secondary School',
-      degree: 'UCE (14 aggregates in 8 subjects)',
-      status: 'Completed'
-    },
-    {
-      period: '2009-2016',
-      institution: 'Akashabo Primary School',
-      degree: 'PLE (8 aggregates)',
-      status: 'Completed'
+      degree: "Uganda Certificate of Education, O'level",
+      status: 'Completed',
+      description: 'Grade: 14 agg (First grade)'
     }
   ]
 
