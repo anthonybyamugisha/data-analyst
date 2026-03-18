@@ -128,7 +128,7 @@ const AboutMe = () => {
         {/* Background Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div 
-            className={`w-96 h-96 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full opacity-95 animate-float transition-all duration-1000 ${isLoaded ? 'scale-100 opacity-100' : 'scale-75 opacity-0'}`}
+            className={`w-64 h-64 md:w-80 md:h-80 lg:w-[500px] lg:h-[500px] rounded-full opacity-95 animate-float transition-all duration-1000 ${isLoaded ? 'scale-100 opacity-100' : 'scale-75 opacity-0'}`}
             style={{
               backgroundImage: `url(${anthonyImage})`,
               backgroundSize: 'contain',
