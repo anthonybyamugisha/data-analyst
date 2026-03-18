@@ -315,7 +315,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow"
+                      className="w-full px-4 py-3 bg-background/50 border border-border/60 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow hover:border-primary/40"
                       placeholder="Your full name"
                     />
                   </div>
@@ -330,7 +330,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow"
+                      className="w-full px-4 py-3 bg-background/50 border border-border/60 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow hover:border-primary/40"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -346,7 +346,7 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow"
+                    className="w-full px-4 py-3 bg-background/50 border border-border/60 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow hover:border-primary/40"
                   >
                     <option value="">Select a service</option>
                     <option value="Data Analysis">Data Analysis & Insights</option>
@@ -369,7 +369,7 @@ const Contact = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 glass focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow resize-none"
+                    className="w-full px-4 py-3 bg-background/50 border border-border/60 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 focus:shadow-glow hover:border-primary/40 resize-none"
                     placeholder="Tell me about your data challenges or project requirements..."
                   />
                 </div>
