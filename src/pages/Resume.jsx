@@ -243,8 +243,7 @@ const Resume = () => {
                 key={index}
                 period={edu.period}
                 title={edu.institution}
-                subtitle={edu.degree}
-                status={edu.status}
+                institution={edu.degree}
                 description={edu.description}
                 delay={index * 0.1}
               />
