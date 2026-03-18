@@ -369,10 +369,10 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">CCNA: Introduction to Networks</h4>
-                    <p className="text-sm text-muted-foreground mb-2">Cisco</p>
-                    <p className="text-sm text-muted-foreground">Issued: 2024</p>
-                    <a href="/documents/CCNA-_Introduction_to_Networks_certificate_byamugishanthony-gmail-com_64f07ace-4814-4b0a-8b7f-13235bd9664b.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">Business Analysis Basics</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Simplilearn</p>
+                    <p className="text-sm text-muted-foreground">Issued: Jan 2026</p>
+                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzc5IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTY4OTQ4Ml85MTgzMTU5XzE3Njc3OTQ0NzEzNzEucG5nIiwidXNlcm5hbWUiOiJCWUFNVUdJU0hBIEFOVEhPTlkgIn0" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline font-medium">Show Credential</a>
                   </div>
                 </div>
               </div>
