@@ -320,7 +320,7 @@ const Projects = () => {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">Let's Work Together</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I'm always excited to collaborate on new projects and bring innovative ideas to life.
+            Ready to transform your data into actionable insights? Let's collaborate to unlock the power of your data through analytics, dashboards, and business intelligence solutions.
           </p>
           <Link to="/contact" className="bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl hover:shadow-hover transition-all duration-300 font-semibold shadow-lg transform hover:scale-105 inline-block">
             Get In Touch
